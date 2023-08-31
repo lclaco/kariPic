@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CariPic</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %> 
+    
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Cardo:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <%= stylesheet_link_tag "bootstrap.min" %>
+    <%= stylesheet_link_tag "bootstrap-icons" %>
+    <%= stylesheet_link_tag "swiper-bundle.min" %>
+    <%= stylesheet_link_tag "glightbox.min" %>
+    <%= stylesheet_link_tag "aos" %>  
+    
+    <!-- Template Main CSS File -->
+    <%= stylesheet_link_tag "main" %>
+
+    <!-- =======================================================
+    * Template Name: PhotoFolio
+    * Updated: May 30 2023 with Bootstrap v5.3.0
+    * Template URL: https://bootstrapmade.com/photofolio-bootstrap-photography-website-template/
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
+  </head>
+
+  <body>
+
+     <%= render 'shared/navbar' %>
+
+     <!-- ======= Hero Section ======= -->
+  <section id="hero" class="hero d-flex flex-column justify-content-center align-items-center" data-aos="fade" data-aos-delay="1500">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-6 text-center">
+          <h2>Hola soy <span>Karina</span> una fotografa profesional de New York</h2>
+          <%= link_to 'Galeria', photographs_path, class:'btn-get-started' %>
+        </div>
+      </div>
+    </div>
+  </section><!-- End Hero Section -->
+
+    <main id="main" data-aos="fade" data-aos-delay="1500">
+    <%= yield %>
+    </main><!-- End #main -->
+    <%= render 'footer/footer' %>  
+
+    <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    
+    <div class="line">
+    </div>
+    
+
+    <!-- Vendor JS Files -->
+    <%= javascript_include_tag 'bootstrap.bundle.min' %>
+    <%= javascript_include_tag 'swiper-bundle.min' %>
+    <%= javascript_include_tag "glightbox.min" %>
+    <%= javascript_include_tag "aos" %>
+    <%= javascript_include_tag "validate" %>
+    
+    <!-- Template Main JS File -->
+    <%= javascript_include_tag "main" %>    
+  </body>
+</html>

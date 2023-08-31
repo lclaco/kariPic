@@ -1,0 +1,6 @@
+<%= form_with(model: [photograph, Comment.new], remote: true) do |form| %>
+  <%= form.text_field :content, placeholder: "Escribe un comentario..." %>
+  <%= form.submit "Enviar Comentario" %>
+<% end %>
+
+

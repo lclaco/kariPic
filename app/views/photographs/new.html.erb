@@ -1,0 +1,26 @@
+
+<section id="testimonials" class="testimonials">
+      <div class="container">
+        <div class="section-header">
+          <h2>Subir Nueva Fotografía</h2>
+        </div>
+
+        
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <%= form_with model: @photograph, url: photographs_path, class: "new_photograph", id: "new_photograph", local: true do |f| %>
+                  <%= f.label :caption, "Titulo", class:"form-label"%>
+                  <%= f.text_field :caption, class: "form-control" %>
+                  <br>
+                  <%= f.label :image, "Seleccionala imagen", class:"form-label" %>                    
+                  <%= f.file_field :image, as: :file, label: 'Imagen', class: "form-control" %>
+                  <br>
+                  <%= f.submit 'Subir Fotografía', class: "btn btn-dark" %>
+                <% end %>
+                </div>  
+            </div>
+        
+      </div>  
+    </section><!-- End Testimonials Section -->

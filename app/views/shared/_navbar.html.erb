@@ -1,0 +1,59 @@
+<!-- ======= Header ======= -->
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+    <div class="container-fluid d-flex">
+      <a <%= link_to (image_tag 'pngwing.com.png'), root_path, class: 'logo d-flex align-items-center  me-auto me-lg-0' %> 
+      </a>
+      <h1><a <%= link_to 'KariPic', root_path, class: 'logo d-flex align-items-center  me-auto me-lg-0' %></a><h1>
+    </div>  
+      <nav id="navbar" class="navbar">
+            <ul>
+              <% if user_signed_in? %>
+                <li>
+                  <p>Hola, <%= current_user.name %></p>
+                </li>
+                <li>
+                  <% if user_signed_in? && current_user.email == 'karina@karipic.cl' %>
+                  <li class="nav-item">
+                    <%= link_to 'Subir Foto', new_photograph_path, class: 'nav-link' %>
+                  </li>
+                <% end %>
+                </li>
+                <li>
+                  <%= link_to 'Mi Perfil', edit_user_registration_path %>
+                </li>
+                <li>
+                  <%= button_to 'Cerrar Sesión', destroy_user_session_path, class: 'btn', method: :delete %>
+                </li>
+              <% else %>
+                <li>
+                  <%= link_to 'Iniciar Sesión', new_user_session_path %>
+                </li>
+                <li>
+                  <%= link_to 'Registrarse', new_user_registration_path %>
+                </li>
+              <% end %>                
+                <%= link_to 'Nosotros', about_index_path %>
+                </li>
+                <li>
+                <%= link_to 'Servicios', service_index_path %>
+                </li>
+                <li>
+                <%= link_to 'Contacto', contact_index_path %>
+                </li>
+                <li>
+            </ul>
+      </nav><!-- .navbar -->
+
+      <div class="header-social-links">
+        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+      </div>
+
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+
+    </div>
+  </header><!-- End Header -->

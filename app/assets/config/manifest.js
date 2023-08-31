@@ -1,0 +1,15 @@
+//= link_tree ../images
+//= link_tree ../builds
+//= link_tree ../fonts
+//= link bootstrap.bundle.min.js
+//= link glightbox.min.js
+//= link aos.js
+//= link swiper-bundle.min.js
+//= link validate.js
+//= link main.js
+//= link bootstrap.min.css
+//= link bootstrap-icons.css
+//= link swiper-bundle.min.css
+//= link glightbox.min.css
+//= link aos.css
+//= link main.css

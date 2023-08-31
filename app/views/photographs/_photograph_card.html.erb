@@ -1,0 +1,29 @@
+<h4><% if photograph.image_url? %>
+      <%= image_tag photograph.image_url, class: "card-img-top" %>
+    <% else %>
+    <p>No hay imagen adjunta</p>
+    <% end %>
+</h4>
+<h5 class="card-title"><%= photograph.caption %></h5>
+    <p class="card-text">Fotógrafo: <%= photograph.user.name %></p>
+    <p class="card-text">Sentimientos/Situaciones: <%= photograph.feelings_situations %></p>
+    <p class="card-text">Fecha: <%= photograph.created_at.strftime("%d/%m/%Y") %></p>
+              <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+              <h6>Comentarios:</h6>
+    <% if photograph.comments.any? %>
+      <ul>
+        <% photograph.comments.each do |comment| %>
+          <li>
+            <strong><%= comment.user.name %>:</strong> <%= comment.content %>
+          </li>
+        <% end %>
+      </ul>
+    <% else %>
+      <p>No hay comentarios</p>
+    <% end %>
+    <div class= "align-items-center">   
+    <%= link_to "Ver más", photograph_path(photograph), class: "btn btn-dark" %>
+    </div>        
+
+
+

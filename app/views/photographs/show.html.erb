@@ -1,0 +1,48 @@
+<section id="testimonials" class="testimonials">
+      <div class="container">
+        <div class="section-header">
+          <h2>Comenta la Fotografía</h2>
+        </div>
+
+        
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <% if @photograph.image.attached? %>
+                  <%= image_tag @photograph.image_url %>
+                <% else %>
+                  <p>No hay imagen adjunta</p>
+                <% end %>
+
+                <p>Leyenda: <%= @photograph.caption %></p>
+
+                <h2>Comentarios</h2>
+                  <% @comments.each do |comment| %>
+                    <p><%= image_tag comment.user.profile_picture if comment.user.profile_picture.attached? %></p>
+                    <p><%= comment.content %></p>
+                    <p><%= link_to 'Eliminar comentario', comment_path(comment), class:'cta-btn', method: :delete, data: { confirm: '¿Estás seguro?' } %></p>
+                  <% end %>
+
+                  <div class="profile">
+                  <%= form_with(model: @comment, url: photograph_comments_path(@photograph), local: true) do |form| %>
+                    <div class="profile mb-3">
+                    <%= form.text_area :content, placeholder: 'Escribe tu comentario aquí...', class: "form-control" %>
+                    </div>
+                    <div class="profile">
+                    <%= form.submit 'Enviar Comentario', class:'btn btn-dark' %>
+                    </div>
+                  <% end %>
+                    
+                  </div>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+              <div class= "align-items-center"> 
+                <%= link_to 'Volver a la galería', photographs_path, class:'btn btn-dark' %>
+              </div>
+            </div>  
+            </div>
+        
+      </div>  
+    </section><!-- End Testimonials Section -->

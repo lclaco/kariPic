@@ -1,0 +1,27 @@
+
+<!-- ======= End Page Header ======= -->
+    <div class="page-header d-flex align-items-center">
+      <div class="container position-relative">
+        <div class="row d-flex justify-content-center">
+          <div class="col-lg-6 text-center">
+            <h2>Galería de Fotografías</h2>
+          </div>
+        </div>
+      </div>
+    </div><!-- End Page Header -->
+
+
+<section id="services" class="services">
+  <div class="container">
+    <div class="row gy-4">
+      <% @photographs.each do |photograph| %>
+        <div class="col-xl-3 col-md-6 d-flex">
+          <div class="service-item position-relative">
+              <%= render partial: 'photograph_card', locals: { photograph: photograph } %>
+          </div>
+        </div><!-- End Service Item -->
+      <% end %> 
+    </div>
+  </div>
+</section><!-- End Services Section -->
+<%= will_paginate @photographs %>

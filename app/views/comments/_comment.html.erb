@@ -1,0 +1,8 @@
+<div class="comment">
+  <%= image_tag comment.user.profile_picture if comment.user.profile_picture?, class: "avatar" %>
+  <p><strong><%= comment.user.name %></strong></p>
+  <p><%= comment.content %></p>
+  <% if current_user == comment.user %>
+    <%= link_to 'Eliminar comentario', comment_path(comment), method: :delete, data: { confirm: '¿Estás seguro de eliminar este comentario?' } %>
+  <% end %>
+</div>
