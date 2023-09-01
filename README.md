@@ -34,3 +34,6 @@ plataforma que pueda atender esta solicitud.
 * Link a Devise
 * Link a Figaro
 * Recuerda la presentación de Usuarios y accesos.
+
+![image](https://github.com/lclaco/kariPic/assets/21201566/9a63ecde-81b4-4576-8b61-adc632573199)
+
