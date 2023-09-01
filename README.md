@@ -36,4 +36,12 @@ plataforma que pueda atender esta solicitud.
 * Recuerda la presentación de Usuarios y accesos.
 
 ![image](https://github.com/lclaco/kariPic/assets/21201566/9a63ecde-81b4-4576-8b61-adc632573199)
+![image](https://github.com/lclaco/kariPic/assets/21201566/89a37f0b-9503-4b54-9c16-3b8b67e78af8)
+![image](https://github.com/lclaco/kariPic/assets/21201566/cb673a10-268f-41cd-8bc5-d78269a7b2e7)
+![image](https://github.com/lclaco/kariPic/assets/21201566/2183a8ac-613d-43ab-b369-2388260ed7e2)
+![image](https://github.com/lclaco/kariPic/assets/21201566/83ac34ad-d018-4c3a-b04d-23e650ac2e6e)
+
+
+
+
 
